@@ -6,12 +6,17 @@
 
 /* main chat window */
 .chat-window{
+
+    *{
+        font-family: "Raleway", sans-serif;
+    }
+
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 20px;
     position: absolute;
     bottom: 60px;
     right: 20px;
-    height: 500px;
+    height: 600px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -36,6 +41,7 @@
             border-radius: 20px;
             width: 80%;
             margin: 8px 0;
+            font-size: 16px;
         }
 
         /* AI response */
@@ -78,6 +84,7 @@
             background-color: var(--grey);
             border-radius: 20px;
             padding-left: 20px;
+            font-size: 16px;
         }
 
         /* send button */
