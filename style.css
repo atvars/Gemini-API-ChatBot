@@ -30,6 +30,7 @@
     .chat{
         flex: 1;
         padding: 0 8px;
+        overflow-y: scroll;
 
         p{
             border-radius: 20px;
