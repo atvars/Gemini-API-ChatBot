@@ -1,0 +1,41 @@
+.chat-window{
+    border: 1px solid lightgrey;
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .close{
+        border: none;
+        padding: 8px 0;
+    }
+
+    .chat{
+        background-color: azure;
+        flex: 1;
+    }
+
+    .input-area{
+        background-color: aquamarine;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 8px;
+
+        input{
+            height: 40px;
+            flex: 1;
+        }
+
+        button{
+            height: 40px;
+            border: none;
+            margin-left: 12px;
+        }
+    }
+}
