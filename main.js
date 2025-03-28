@@ -7,9 +7,11 @@ const model = genAI.getGenerativeModel({
     systemInstruction: businessInfo
 });
 
+let messages = {
+  history: [],
+}
 
-
-function sendMessage() {
+async function sendMessage() {
   const userMessage = document.querySelector(".chat-window input").value;
 
   if (userMessage.length){
