@@ -1,8 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // for this purpuse of project API key will be stored directly here
-
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const API_KEY = "AIzaSyD7bVkFIyWXalmhYV6kkEjwUYYsj5m9yKM";
+const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ 
     model: "gemini-1.5-pro"
 });
@@ -28,7 +28,25 @@ async function sendMessage() {
         // send message
       const chat = model.startChat(messages);
       let result = await chat.sendMessage(userMessage)
-      console.log(result.response.text());
+
+      document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend", `
+        <div class="model">
+            <p>${result.response.text()}</p>
+        </div>
+    `);
+
+    // adding to history user input
+        messages.history.push({
+          role: "user",
+          parts:[{text: userMessage}],
+        });
+        
+    // // adding to history bot response
+        messages.history.push({
+          role: "model",
+          parts:[{text: result.response.text()}],
+        });
+        
 
   }
 }
