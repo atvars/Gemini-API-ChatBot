@@ -6,7 +6,8 @@
 
 /* main chat window */
 .chat-window{
-    border: 1px solid lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
     position: absolute;
     bottom: 60px;
     right: 20px;
@@ -19,6 +20,7 @@
     /* close button */
     .close{
         border: none;
+        border-radius: 20px 20px 0 0 ;
         padding: 8px 0;
         background-color: #1a1a1a;
         color: white;
@@ -82,14 +84,18 @@
             height: 40px;
             width: 40px;
             border: none;
-            border-radius: 15px;
+            border-radius: 100%;
             margin-left: 12px;
             background-color: var(--blue);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px
+            padding: 15px;
+
+            img{
+                width: 17px;
+            }
         }
     }
 }
