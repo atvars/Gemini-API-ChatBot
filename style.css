@@ -79,6 +79,15 @@ html {
                 padding: 14px;
             }
         }
+
+        div.error{
+
+            p{
+                background-color: var(--grey);
+                padding: 14px;
+                color:red;
+            }
+        }
     }
 
     /* input area */

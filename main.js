@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // for this purpuse of project API key will be stored directly here
-const API_KEY = "_AIzaSyD7bVkFIyWXalmhYV6kkEjwUYYsj5m9yKM";
+const API_KEY = "AIzaSyD7bVkFIyWXalmhYV6kkEjwUYYsj5m9yKM";
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ 
     model: "gemini-1.5-pro"
@@ -52,7 +52,7 @@ async function sendMessage() {
     } catch (error) {
       document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend", `
         <div class="error">
-            <p style=color:red;>Sorry, the message could not be sent!</p>
+            <p>Sorry, the message could not be sent!</p>
         </div>
     `);
     }
